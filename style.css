@@ -1,0 +1,414 @@
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+list-style: none;
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&family=Poppins&family=Roboto&family=Rubik:wght@300&display=swap'); 
+.container{
+    width: 1200px;
+    max-width: 95%;
+    margin: 0 auto;
+}
+.header{
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    top: 0;  
+    z-index: 1;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    font-size: 16px;
+}
+a{
+    color: inherit;
+}
+.menu a{
+    font-size: 15px;
+    font-weight: 400;
+    font-family: "Josefin Sans",sans-serif;
+}
+.menu a:hover{
+    color: rgb(112, 95, 206);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.4s;
+}
+.has_dropdown{
+    position: relative;
+}
+.dropdown{
+    width: 140px;
+    max-width: 200px;
+    height: fit-content;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgb(28, 0, 151);
+}
+.dropdown li{
+    padding: 10px;
+    color: rgb(219, 220, 245);
+}
+.has_dropdown:hover > .dropdown{
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+    transition: 1s;
+}
+.dropdown:hover a{
+    transition: all .3s ease-out 0s; 
+} 
+.button{
+    border: 1px solid orange;
+    padding: 15px 20px;
+    background-color: orange;
+    border-radius: 10px;
+    color: white;
+}
+/*section2*/
+.section2{
+    height: 300px;
+    width: 1200px;
+}
+.introduction{
+    height: 400px;
+    width: 800px;
+    margin-left: 25%;
+    margin-top: 250px;
+    text-align: center;
+}
+.introduction h1{
+    font-size: 60px;
+    color: rgb(8, 8, 99);
+    line-height: 1.2;
+    font-family: "Josefin Sans",sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+.intro{
+    width: 750px;
+    height: 150px;
+    position: relative;    
+}
+.intro dd::before{
+    position: absolute;
+    content:"";
+    height: 12px;
+    width: 500px;
+    top: 78%;
+    padding-left: 20px;
+    background-color: orange;
+    display: inline-block;
+    z-index: -1;
+}
+.introduction p{
+    font-size: 20px;
+    color: #00095E;
+    margin-bottom: 50px;
+}
+.buttons{
+    border: 1px solid rgb(43, 10, 121);
+    background:linear-gradient(to bottom, #00095e 0%, #0c0c1f 100%);
+    padding: 25px 60px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+    position: relative;
+}
+.buttons::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-radius: 10px;
+    background-color: orange;
+    transition: transform 0.5s;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+/*section3*/
+.section3{
+    height: 800px;
+    width: 100%;
+    background-image: url(https://preview.colorlib.com/theme/tralive/assets/img/hero/h1_hero1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.main{
+    height: 478px;
+    width: 1200px; 
+}
+.comingcar{
+    width: 900px;
+    height: 400px;
+    position: absolute;
+    top: 200px;
+    right: 0;
+    animation: car 4s linear infinite alternate;
+}
+.comingcar img{
+    width: 100%;
+    height: 100%;  
+}
+@keyframes car{
+    from{right: 100px;}
+    to{right: 300px;}
+}
+/*section4*/
+.section4{
+    width: 100%;
+    height: 500px;
+    padding: 120px 0;
+}
+.slideshow{
+    gap: 20px;
+    display: flex;
+    margin-top: 50px;
+    margin-left: 30px;
+    justify-content: center;
+}
+.title{
+    text-align: center;
+}
+.title span{
+    color: rgb(126, 160, 255);
+    font-size: 17px;
+    letter-spacing: 4px;
+    font-weight: 400;
+}
+.title h2{
+    font-size: 50px;
+    font-weight: 700;
+    padding: 20px 0;
+    color: #00095E;
+}
+.turkey{
+    width: 360px;
+    height: 370px;
+    background-color: white;
+    box-shadow: 0 10px 10px rgb(221, 221, 221);
+}
+.turkey:hover img{
+    transition: 0.5s all ;
+    transform: scale(1.1)
+}
+.heading{
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.heading h3{
+    color: #00095E;
+    padding: 20px 5px 20px 20px ;
+}
+.heading .price{
+    color: rgb(126, 160, 255);
+    font-size: 20px;
+    padding:  20px 25px 20px 25px;
+} 
+.heading p a{
+    color: rgb(126, 160, 255);
+    font-size: 15px;
+    padding: 5px 20px 20px 20px;
+}
+.heading p{
+    color: #00095E;
+    padding: 5px 20px 20px 20px;
+}
+/*section5*/
+.section5{
+    width: 100%;
+    height: 600px;
+    margin-top: 20%;
+}
+.sect4{
+    display: flex;
+    align-items: center;
+    gap: 10%;
+}
+.info{
+    height: 500px;
+    width: 470px;
+    padding: 30px 0;
+}
+.info span{
+    font-size: 20px;
+    color: rgb(126, 160, 255);
+}
+.info h2{
+    font-size: 45px;
+    color: #00095E;
+    padding: 20px 0;
+}
+.info p{
+    padding-bottom: 50px ;
+    font-size: 20px;
+    font-weight: 400;
+    color: #677F8B;
+    line-height: 30px;
+}
+/*section6*/
+.section6{
+    height: 500px;
+    width: 100%;
+   background-image: url(https://preview.colorlib.com/theme/tralive/assets/img/gallery/section_bg1.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.sect6{
+    width: 1000px;
+    padding: 130px 0;
+    text-align: center;
+    color: white;
+    margin-left: 100px;
+}
+.sect6 h2{
+    font-size: 45px;
+}
+.sect6 .first{
+    font-size: 27px;
+    line-height: 30px;
+    padding: 30px;
+}
+.bottom{
+    display: flex;
+    justify-content: center;
+}
+.bottom-text{
+    padding: 15px;
+    font-size: 20px;
+}
+.bottom-text span{
+    padding-bottom: 20px;
+}
+/*section8*/
+
+.section8{
+    margin-left: 5%;
+    margin-top: 10%;
+    height: 600px;
+}
+.video-area{
+    height: 500px;
+    width: 1100px;
+    position: relative;
+    background-image: url(https://preview.colorlib.com/theme/tralive/assets/img/gallery/video-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid white;
+    border-radius: 30px;
+}
+.video iframe{
+    position: absolute;
+    border: 1px solid white;
+    border-radius: 30px;
+    height: 500px;
+    width: 1100px;
+    z-index: -1;
+}
+.video-icon{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+/*instagram area*/
+.instagram-area{
+    width: 100%;
+    height: 220px;
+}
+.photos{
+    display: flex;
+}
+.photos img{
+    width: 100%;
+    height: 100%;
+}
+.photos li{
+    width: 270px;
+    height: 230px;
+}
+.photos li:hover img{
+    filter:sepia(50%);
+}
+/*footer*/
+footer{
+    width: 1350px;
+    height: 500px;
+    background-color: rgb(16, 16, 97);
+}
+.footer-row{
+    height: 300px;
+    width: 1200px;
+    padding: 70px;
+    display: flex;
+    gap: 50px;
+}
+.footer-row-first{
+    width: 370px;
+    height: 300px;
+}
+.footer-row-first .flogo{
+    padding: 25px 0;
+}
+.footer-row p{
+    font-size: 20px;
+    line-height: 25px;
+    color: #677F8B;
+    padding: 20px 0;
+}
+.footer-social{
+    display: flex;
+    gap: 20px;
+    color: white;
+    font-size: 20px;
+    padding-top: 15px;
+}
+.footer-row-second{
+    width: 170px;
+    height: 230px;
+}
+.footer-row h4{
+    color: white;
+    font-size: 25px;
+    padding-bottom: 30px;
+}
+.second li{
+    padding: 10px 0;
+    color: #677F8B;
+    font-size: 18px;
+    font-weight: 400;
+}
+.second li:hover a{
+    color: white;
+    text-decoration: underline;
+}
+.footer-row-four a{
+    color: yellow;
+    font-size: 25px ;
+}
